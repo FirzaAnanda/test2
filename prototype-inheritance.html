@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function  Employee(name){
+    this.name = name;
+  }
+
+  function  Manager(name){
+      this.name = name;
+  }
+
+  Manager.prototype = Object.create(Employee.prototype);
+
+  Manager.prototype.sayHello = function (name){
+      console.info(`Hai ${name} namaku ${this.name}`)
+  }
+
+  Employee.prototype.sayHello = function (name){
+      console.info(`Hai ${name} my name is ${this.name}`)
+  }
+
+  const employee = new Employee("Firza")
+  employee.sayHello("Nanda")
+
+  const manager = new Manager("Kai")
+  manager.sayHello("Havertz")
+
+  console.info(Employee)
+  console.info(Manager)
+</script>
+
+</body>
+</html>

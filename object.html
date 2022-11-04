@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Obj</title>
+</head>
+<body>
+<script>
+    // constructor function
+
+    function Person(firstName, lastName){ // parameter
+    this.firstname = firstName; // membuat property
+    this.lastname = lastName;
+    this.sayHello = function (name){
+        console.info(`halo ${name}, namaku ${this.firstname}`)} //method
+    }
+
+    const eko = new Person("Firza","ananda"); // new digunakan untuk membuat object
+    //eko.firstname = "Firza"
+    //eko.lastname = "Ananda"
+    eko.sayHello("jack")
+
+    const firza = new Person("raheem", "sterling");
+    //firza.firstname = "Raheem"
+    //firza.lastname = "Sterling"
+    firza.sayHello("woke")
+
+    console.info(eko)
+    console.log(firza)
+
+</script>
+</body>
+</html>

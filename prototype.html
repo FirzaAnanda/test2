@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prototype</title>
+</head>
+<body>
+<script>
+    function Person(firstName, lastName){
+        this.firstname = firstName;
+        this.lastname = lastName;
+        this.sayHello = function (name){
+            console.info(`Halo ${name} namaku ${firstName}`)
+        }
+    }
+
+    const firza = new Person("Firza", "Ananda")
+    const nanda = new Person("raheem", "sterling")
+
+    console.info(firza)
+    console.info(nanda)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Constructor  inheritance</title>
+</head>
+<body>
+<script>
+  function Employee(firstName){
+    this.firstName = firstName;
+    this.sayHello = function(name){
+      console.info(`Halo ${name}, namaku ${firstName}`)
+    }
+  }
+
+  function Manager(firstName, lastName){
+    this.lastName = lastName;
+    Employee.call(this, firstName)
+  }
+
+  function Ob(firstName, lastName){
+      this.lastName = lastName;
+      Employee.call(this, firstName)
+  }
+
+  function dagang(firstName, lastName){
+      this.lastName = lastName;
+      Employee.call(this, firstName)
+  }
+
+  const firza =  new Manager("Firza", "Ananda")
+  console.info(firza)
+
+  const rama = new Manager("rama")
+  console.info(rama)
+
+  const pembantu = new Ob("Setia", "Kurniawan")
+  console.info(pembantu)
+
+  const pedagang = new dagang("Pak Eko", "Pak Budi")
+  console.info(pedagang)
+</script>
+</body>
+</html>

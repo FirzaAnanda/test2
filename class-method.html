@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class Method</title>
+</head>
+<body>
+<script>
+
+    class Person {
+        constructor(name) {
+            this.name = name;
+        }
+        sayHello(name) {
+            console.info(`Halo ${name},  namaku ${this.name}`)
+    }
+    }
+
+    const firza = new Person("Nanda")
+    console.info(firza)
+    firza.sayHello('Kai')
+
+    const mason = new Person("Kepa")
+    console.info(mason)
+    mason.sayHello('Koulibaly')
+
+
+
+</script>
+</body>
+</html>
